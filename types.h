@@ -1,8 +1,32 @@
+/**
+ * @file types.h
+ * @author Profesores Programación 2
+ * @date 2 February 2020
+ * @brief ADT Boolean and Status
+ *
+ * @details Here typically goes a more extensive explanation of what the header
+ * defines. Doxygens tags are words preceeded by @.
+ * 
+ * @see 
+ */
+
 #ifndef TYPES_H_
 #define TYPES_H_
 
-#include <stdbool.h>
+/**
+ * @brief ADT Boolean
+ */
+typedef enum {
+    FALSE=0, /*!< False value */
+    TRUE=1  /*!< True value  */
+} Bool;
 
-typedef enum { OK = 0, ERROR = 1 } Status;
+/** 
+ * @brief ADT Status
+ */
+typedef enum {
+    ERROR=0, /*!< To codify an ERROR output */
+    OK=1     /*!< OK output */
+} Status;
 
-#endif
+#endif /* TYPES_H_ */
