@@ -18,7 +18,7 @@ int gcd(int m, int n){
 
 Rational *rational_create(int num, int den);
 
-void rational_destroy(Rational *r);
+void rational_free(Rational *r);
 
 Rational *rational_sum(Rational *r1, Rational *r2);
 

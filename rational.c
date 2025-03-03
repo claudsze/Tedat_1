@@ -31,7 +31,7 @@ Rational *rational_create(int num, int den)
     return r;
 }
 
-void rational_destroy(Rational *r)
+void rational_free(Rational *r)
 {
     if (r != NULL)
     {
