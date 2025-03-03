@@ -4,18 +4,6 @@
 
 typedef struct _Rational Rational;
 
-int gcd(int m, int n){
-    int r;
-
-    while(n!=0){
-        r=m%n;
-        m=n;
-        n=r;
-    }
-
-    return m;
-}
-
 Rational *rational_create(int num, int den);
 
 void rational_free(Rational *r);
