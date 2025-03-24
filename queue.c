@@ -133,6 +133,7 @@ int queue_print(FILE *fp, const Queue *pq, int (*ele_print)(FILE *, const void *
 
 Status queue_reverse(Queue *pq) {
   int i, j;
+  void *temp=NULL;
 
   if(!pq||pq->front==pq->rear){
     return ERROR;
@@ -142,7 +143,7 @@ Status queue_reverse(Queue *pq) {
   j= (pq->rear - 1 + MAX_QUEUE)%MAX_QUEUE;
 
   while (i != j && (i + 1) % MAX_QUEUE != j) {
-    void *temp = pq->data[i];
+    temp = pq->data[i];
     pq->data[i] = pq->data[j];
     pq->data[j] = temp;
 
